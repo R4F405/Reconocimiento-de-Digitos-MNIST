@@ -1,80 +1,80 @@
- # Reconocimiento de Dígitos MNIST ✍️🔢
+ # MNIST Digit Recognition ✍️🔢
 
-[![Licencia: GPL v3](https://img.shields.io/badge/Licencia-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python: 3.8+](https://img.shields.io/badge/Python-3.8%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/downloads/release/python-380/)
 
-Este proyecto implementa un reconocedor de dígitos escritos a mano utilizando un modelo entrenado en el conjunto de datos MNIST. El sistema puede procesar imágenes de dígitos, centrarlas adecuadamente y realizar una predicción sobre qué número representan.
+This project implements a handwritten digit recognizer using a model trained on the MNIST dataset. The system can process images of digits, center them appropriately, and predict which number they represent.
 
-## 💡 Descripción
+## 💡 Description
 
-Este programa utiliza una red neuronal entrenada con el conjunto de datos MNIST para reconocer dígitos escritos a mano. Características principales:
+This program uses a neural network trained with the MNIST dataset to recognize handwritten digits. Main features:
 
-- Procesamiento de imágenes para adaptarlas al formato MNIST (28x28 píxeles)
-- Centrado automático del dígito basado en el centro de masa
-- Normalización y binarización de la imagen
-- Predicción mediante un modelo pre-entrenado
+- Image processing to adapt them to the MNIST format (28x28 pixels)
+- Automatic digit centering based on the center of mass
+- Image normalization and binarization
+- Prediction using a pre-trained model
 
-## ✅ Requisitos
+## ✅ Requirements
 
-- Python 3.8 o superior
+- Python 3.8 or higher
 - TensorFlow
 - NumPy
 - Matplotlib
 - PIL (Pillow)
 - SciPy
 
-Puedes instalar las dependencias con:
+You can install the dependencies with:
 
 ```bash
 pip install tensorflow numpy matplotlib pillow scipy
 ```
 
-## 📁 Estructura del proyecto
+## 📁 Project Structure
 
 ```
 .
-├── modelo_mnist.keras    # Modelo TensorFlow pre-entrenado
-├── numero.png            # Imagen de ejemplo para predecir
-└── Reconocer_Numeros.py  # Script principal
+├── modelo_mnist.keras    # Pre-trained TensorFlow model
+├── numero.png            # Example image to predict
+└── Reconocer_Numeros.py  # Main script
 ```
 
-## ▶️ Uso
+## ▶️ Usage
 
-1.  Coloca una imagen de un dígito escrito a mano con el nombre `numero.png` en el directorio del proyecto.
-2.  Asegúrate de que el modelo pre-entrenado `modelo_mnist.keras` esté en el directorio.
-3.  Ejecuta el script:
+1.  Place an image of a handwritten digit named `numero.png` in the project directory.
+2.  Make sure the pre-trained model `modelo_mnist.keras` is in the directory.
+3.  Run the script:
 
 ```bash
 python Reconocer_Numeros.py
 ```
 
-El programa mostrará la imagen procesada y la predicción del dígito.
+The program will display the processed image and the digit prediction.
 
-## ⚙️ Funcionamiento
+## ⚙️ How it Works
 
-El script realiza las siguientes operaciones:
+The script performs the following operations:
 
-1.  Carga y procesa la imagen:
-    * Convierte a escala de grises
-    * Invierte los colores (asume fondo blanco, dígito negro)
-    * Redimensiona a 28x28 píxeles
-    * Binariza la imagen
-    * Normaliza los valores entre 0 y 1
-    * Centra el dígito basado en su centro de masa
+1.  Loads and processes the image:
+    * Converts to grayscale
+    * Inverts colors (assumes white background, black digit)
+    * Resizes to 28x28 pixels
+    * Binarizes the image
+    * Normalizes values between 0 and 1
+    * Centers the digit based on its center of mass
 
-2.  Carga el modelo pre-entrenado con TensorFlow.
+2.  Loads the pre-trained model with TensorFlow.
 
-3.  Realiza la predicción del dígito y muestra el resultado.
+3.  Performs digit prediction and displays the result.
 
-## 🎨 Personalización
+## 🎨 Customization
 
-Para utilizar otra imagen, simplemente cambia la variable `ruta_imagen` en el código o modifica el archivo para que acepte argumentos de línea de comandos.
+To use another image, simply change the `ruta_imagen` variable in the code or modify the file to accept command-line arguments.
 
-## 📜 Licencia
+## 📜 License
 
-Este proyecto está bajo la Licencia Pública General de GNU v3.0. Consulta el archivo [LICENSE](LICENSE) para más detalles .
+This project is under the GNU General Public License v3.0. See the [LICENSE](LICENSE) file for more details.
 
-## 👨‍💻 Autor
+## 👨‍💻 Author
 
 R4F405
 
